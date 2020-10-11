@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Car Control Application</string>
+    <string name="label_oil_remaining">Oil life remaining</string>
+    <string name="label_fuel_range">Fuel Range</string>
+    <string name="label_coolant">Coolant</string>
+    <string name="label_brake_fluid">Brake Fluid</string>
+    <string name="label_washer_fluid">Washer Fluid</string>
+    <string name="label_power_sttering_fluid">Power Steering Fluid</string>
+    <string name="label_tire_pressure_fluid">Tire Pressure Fluid</string>
+    <string name="label_call_for_help">Call for Help</string>
+    <string name="label_low">Low</string>
+    <string name="label_normal">Normal</string>
+    <string name="label_miles">%d mi</string>
+    <string name="title_summary">Summary</string>
+
+</resources>

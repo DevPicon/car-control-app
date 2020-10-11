@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/bonnet"
+        motion:constraintSetStart="@id/summary"
+        motion:duration="1000">
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@id/iv_car" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="0"
+                motion:motionTarget="@id/iv_car" />
+            <KeyAttribute
+                android:rotation="-90"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="100dp"
+                android:translationY="-75dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/iv_car" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@id/wheels"
+        motion:constraintSetStart="@id/bonnet"
+        motion:duration="1000">
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@id/iv_car" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="100dp"
+                android:translationY="-75dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/iv_car" />
+            <KeyAttribute
+                android:scaleX="1"
+                android:scaleY="1"
+                android:translationX="0dp"
+                android:translationY="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/iv_car" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/summary">
+        <Constraint
+            android:id="@+id/gl_end"
+            android:layout_width="1dp"
+            android:orientation="vertical"
+            motion:layout_constraintGuide_percent="1" />
+        <Constraint
+            android:id="@+id/iv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="@+id/gl_end"
+            motion:layout_constraintStart_toStartOf="@+id/gl_end"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bonnet">
+        <Constraint
+            android:id="@+id/gl_end"
+            android:layout_width="1dp"
+            android:orientation="vertical"
+            motion:layout_constraintGuide_percent="1" />
+        <Constraint
+            android:id="@+id/iv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="@+id/gl_end"
+            motion:layout_constraintStart_toStartOf="@+id/gl_end"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/wheels">
+        <Constraint
+            android:id="@+id/iv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+</MotionScene>
