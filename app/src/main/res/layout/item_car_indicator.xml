@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -19,17 +18,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:text="@string/label_low"
         app:layout_constraintBottom_toBottomOf="@id/iv_indicator_icon"
         app:layout_constraintStart_toEndOf="@+id/iv_indicator_icon"
-        app:layout_constraintTop_toTopOf="@id/iv_indicator_icon"
-        tools:text="@string/label_low" />
+        app:layout_constraintTop_toTopOf="@id/iv_indicator_icon" />
 
     <TextView
         android:id="@+id/tv_indicator_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/label_oil_remaining"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@id/tv_indicator_value"
-        app:layout_constraintStart_toStartOf="@id/tv_indicator_value"
-        tools:text="@string/label_oil_remaining"
+        app:layout_constraintStart_toStartOf="@id/tv_indicator_value" />
 </androidx.constraintlayout.widget.ConstraintLayout>
