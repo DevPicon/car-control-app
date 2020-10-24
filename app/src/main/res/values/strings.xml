@@ -12,5 +12,8 @@
     <string name="label_normal">Normal</string>
     <string name="label_miles">%d mi</string>
     <string name="title_summary">Summary</string>
+    <string name="label_summary">Summary</string>
+    <string name="label_bonnet">Bonnet</string>
+    <string name="label_wheels">Wheels</string>
 
 </resources>
