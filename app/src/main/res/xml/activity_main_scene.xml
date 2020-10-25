@@ -37,13 +37,13 @@
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintBottom_toTopOf="@+id/bnv_menu"
                 motion:layout_constraintEnd_toEndOf="@+id/gl_end"
                 motion:layout_constraintStart_toStartOf="@+id/gl_end"
                 motion:layout_constraintTop_toTopOf="parent" />
             <Transform
-                android:scaleX="2"
-                android:scaleY="2"
+                android:scaleX="1.75"
+                android:scaleY="1.75"
                 android:translationX="0dp"
                 android:translationY="0dp" />
         </Constraint>
@@ -59,7 +59,7 @@
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintBottom_toTopOf="@+id/bnv_menu"
                 motion:layout_constraintEnd_toEndOf="@+id/gl_end"
                 motion:layout_constraintStart_toStartOf="@+id/gl_end"
                 motion:layout_constraintTop_toTopOf="parent" />
@@ -77,7 +77,7 @@
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintBottom_toTopOf="@+id/bnv_menu"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toTopOf="parent" />

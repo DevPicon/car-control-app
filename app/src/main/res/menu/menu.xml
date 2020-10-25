@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_summary"
+        android:title="@string/label_summary" />
+    <item
+        android:id="@+id/menu_item_bonnet"
+        android:title="@string/label_bonnet" />
+    <item
+        android:id="@+id/menu_item_wheels"
+        android:title="@string/label_wheels" />
+</menu>
