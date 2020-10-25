@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="indicator_level_low">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="indicator_level_normal">
+        <item name="android:textColor">@android:color/holo_green_light</item>
+    </style>
+
 </resources>

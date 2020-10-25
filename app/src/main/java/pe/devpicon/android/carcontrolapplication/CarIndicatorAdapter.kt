@@ -2,6 +2,9 @@ package pe.devpicon.android.carcontrolapplication
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
+import androidx.core.widget.TextViewCompat
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import pe.devpicon.android.carcontrolapplication.databinding.ItemCarIndicatorBinding
@@ -34,7 +37,22 @@ class CardIndicatorViewHolder(val viewBinding: ItemCarIndicatorBinding) : ViewHo
     fun bind(carIndicatorViewState: CarIndicatorViewState) {
         with(viewBinding) {
             tvIndicatorLabel.text = carIndicatorViewState.indicatorLabel
-            tvIndicatorValue.text = carIndicatorViewState.indicatorValue
+            when (carIndicatorViewState.indicatorValue) {
+                0 -> {
+                    tvIndicatorValue.text = viewBinding.root.context.getString(R.string.label_normal)
+                    TextViewCompat.setTextAppearance(tvIndicatorValue, R.style.indicator_level_normal)
+                }
+
+                1 -> {
+                    tvIndicatorValue.text = viewBinding.root.context.getString(R.string.label_low)
+                    TextViewCompat.setTextAppearance(tvIndicatorValue, R.style.indicator_level_low)
+                }
+                else -> tvIndicatorValue.text = "N/A"
+            }
+
+            motionItem.setTransitionDuration(5000)
+            motionItem.transitionToState(R.id.item_end)
         }
+
     }
 }

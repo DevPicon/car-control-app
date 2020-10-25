@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motion_item"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:layoutDescription="@xml/item_car_indicator_scene">
 
     <ImageView
         android:id="@+id/iv_indicator_icon"
@@ -10,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:src="@drawable/oil"
-        app:tint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#fff" />
 
     <TextView
         android:id="@+id/tv_indicator_value"
@@ -34,4 +36,4 @@
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@id/tv_indicator_value"
         app:layout_constraintStart_toStartOf="@id/tv_indicator_value" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
